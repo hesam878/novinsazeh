@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نوین سازه البرز - سازه‌های هوشمند، آینده‌ای مطمئن</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tahoma', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #0a344a;
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #ff8c00;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-left: 25px;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #ff8c00;
+        }
+
+        .btn-orange {
+            background-color: #ff8c00;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn-orange:hover {
+            background-color: #e67e00;
+        }
+
+        .btn-blue {
+            background-color: #1a9bc7;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn-blue:hover {
+            background-color: #1680a5;
+        }
+
+        .btn-outline-blue {
+            border: 2px solid #1a9bc7;
+            color: #1a9bc7;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .btn-outline-blue:hover {
+            background-color: #1a9bc7;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .hero-img {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .hero-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #0a344a;
+        }
+
+        .hero-content h1 span {
+            color: #1a9bc7;
+        }
+
+        .hero-content p {
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        /* Features Section */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin: 50px 0 30px;
+            color: #0a344a;
+        }
+
+        .section-title span {
+            color: #1a9bc7;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: #0a344a;
+            font-size: 18px;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose {
+            background-color: #fff;
+            padding: 60px 0;
+        }
+
+        .why-choose-item {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        .why-choose-icon {
+            width: 80px;
+            height: 80px;
+            background: #fff;
+            border: 2px solid #ff8c00;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20px;
+            color: #ff8c00;
+            font-size: 30px;
+        }
+
+        .why-choose-content h3 {
+            margin-bottom: 10px;
+            color: #0a344a;
+            font-size: 20px;
+        }
+
+        .why-choose-content p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .project-card:hover .project-img img {
+            transform: scale(1.05);
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            margin-bottom: 10px;
+            color: #0a344a;
+            font-size: 20px;
+        }
+
+        .project-content p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .stat-number.orange { color: #ff8c00; }
+        .stat-number.yellow { color: #ffc107; }
+        .stat-number.blue { color: #1a9bc7; }
+
+        .stat-label {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0a344a;
+            margin-bottom: 5px;
+        }
+
+        .stat-desc {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        .testimonial-avatar {
+            width: 80px;
+            height: 80px;
+            background: #e6f7ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            color: #0a344a;
+            font-size: 30px;
+        }
+
+        .testimonial-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0a344a;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .testimonial-text {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Articles Section */
+        .articles {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .article-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        .article-img {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .article-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .article-content {
+            padding: 20px;
+        }
+
+        .article-content h3 {
+            margin-bottom: 10px;
+            color: #0a344a;
+            font-size: 20px;
+        }
+
+        .article-content p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a344a;
+            color: white;
+            padding: 40px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: white;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: white;
+            color: #333;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff8c00;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #e67e00;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0a344a;
+            font-size: 24px;
+            transition: transform 0.3s;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .social-icon i {
+            font-size: 24px;
+        }
+
+        .footer-bottom {
+            background-color: #6cb2d4;
+            padding: 15px 0;
+            text-align: center;
+            color: #0a344a;
+            font-weight: bold;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-menu li {
+                margin: 10px 0;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+
+        /* Icons using Font Awesome (you can replace with actual icons or SVGs) */
+        .icon-placeholder {
+            font-size: 24px;
+            color: #ff8c00;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">درخواست مشاوره رایگان<span></span></a>
+                <ul class="nav-menu">
+                    <li><a href="#">تماس با ما</a></li>
+                    <li><a href="#">وبلاگ</a></li>
+                    <li><a href="#">پروژه‌ها</a></li>
+                    <li><a href="#">خدمات</a></li>
+                    <li><a href="#">درباره ما</a></li>
+                    <li><a href="#">خانه</a></li>
+                    <li><a href="#"><img src="https://via.placeholder.com/100x30?text=نوین+سازه+البرز" alt="لوگو"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-img">
+            <img src="https://via.placeholder.com/600x400?text=سازه+هوشمند" alt="سازه هوشمند">
+        </div>
+        <div class="hero-content">
+            <h1>سازه‌های هوشمند، آینده‌ای مطمئن</h1>
+            <p>با نوین سازه البرز، شما می‌توانید با انتخابی هوشمندانه، آینده‌ای روشن و مطمئن را تجربه کنید و سازه‌هایی مقاوم، زیبا و ماندگار را در کنار کیفیت و نوآوری به دست آورید.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-blue">مشاهده خدمات</a>
+                <a href="#" class="btn-outline-blue">پروژه‌های ما</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container">
+        <h2 class="section-title">تخصص‌های <span>نوین سازه البرز</span></h2>
+        <p style="text-align: center; margin-bottom: 30px;">در نوین سازه البرز، ما خدماتی جامع در حوزه طراحی و اجرای سازه‌های مدرن و پایدار ارائه می‌دهیم. هدف ما خلق پروژه‌هایی است که در کنار زیبایی و دوام، امنیت و نوآوری را نیز برای شما به همراه داشته باشد.</p>
+        
+        <div class="features">
+            <div class="feature-card">
+                <h3>بازسازی و نوسازی</h3>
+                <p>به روزرسانی و بازسازی ساختمان‌ها با رویکردی مدرن و پایدار.</p>
+            </div>
+            <div class="feature-card">
+                <h3>مشاوره تخصصی</h3>
+                <p>ارائه راهکارهای هوشمندانه برای انتخاب بهترین مسیر در ساخت و ساز.</p>
+            </div>
+            <div class="feature-card">
+                <h3>اجرای پروژه‌های ساختمانی</h3>
+                <p>از شروع تا پایان، پروژه‌ها را با بالاترین کیفیت و در کوتاه‌ترین زمان اجرا می‌کنیم.</p>
+            </div>
+            <div class="feature-card">
+                <h3>طراحی سازه‌های مدرن</h3>
+                <p>طراحی اصولی و نوآورانه برای خلق سازه‌هایی ایمن، زیبا و پایدار.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="#" class="btn-orange">مشاهده همه خدمات</a>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose container">
+        <h2 class="section-title">چرا انتخاب <span>نوین سازه البرز</span>؟</h2>
+        <p style="text-align: center; margin-bottom: 40px;">ما تنهای به ساختن سازه‌ها بسنده نمی‌کنیم؛ هدف ما خلق ارزش ماندگار است. با ترکیب مهندسی دقیق، نوآوری در طراحی و تعهد به کیفیت، پروژه‌هایی ارائه می‌دهیم که هم مقاوم اند، هم زیبا و هم آینده‌نگرانه.</p>
+        
+        <div class="why-choose-item">
+            <div class="why-choose-icon"><span class="icon-placeholder">⚙️</span></div>
+            <div class="why-choose-content">
+                <h3>استفاده از فناوری‌های روز</h3>
+                <p>بهره‌گیری از جدیدترین متدها و ابزارهای مهندسی برای ساخت سازه‌های هوشمند و پایدار.</p>
+            </div>
+        </div>
+
+        <div class="why-choose-item">
+            <div class="why-choose-icon"><span class="icon-placeholder">🛡️</span></div>
+            <div class="why-choose-content">
+                <h3>تضمین کیفیت و ایمنی</h3>
+                <p>رعایت دقیق استانداردهای جهانی و اطمینان از مقاومت، ایمنی و دوام بالای تمامی پروژه‌ها.</p>
+            </div>
+        </div>
+
+        <div class="why-choose-item">
+            <div class="why-choose-icon"><span class="icon-placeholder">👥</span></div>
+            <div class="why-choose-content">
+                <h3>تیم متخصص و متعهد</h3>
+                <p>به‌ره‌گیری از جدیدترین متدها و ابزارهای مهندسی برای ساخت سازه‌های هوشمند و پایدار.</p>
+            </div>
+        </div>
+
+        <div class="why-choose-item">
+            <div class="why-choose-icon"><span class="icon-placeholder">📞</span></div>
+            <div class="why-choose-content">
+                <h3>تیم متخصص و متعهد</h3>
+                <p>حضور مهندسان و کارشناسان حرفه‌ای که با دانش و تجربه، هر پروژه را با دقت و مسئولیت‌پذیری اجرا می‌کنند.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects container">
+        <h2 class="section-title">پروژه‌های <span>نوین سازه البرز</span>؟</h2>
+        <p style="text-align: center; margin-bottom: 40px;">هر پروژه برای ما فرصتی است تا تخصص و خلاقیت را به نمایش بگذاریم. در ادامه نمونه‌ای از پروژه‌های شاخص نوین سازه البرز را مشاهده می‌کنید.</p>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://via.placeholder.com/300x200?text=مرکز+تجاری" alt="مرکز تجاری">
+                </div>
+                <div class="project-content">
+                    <h3>مرکز تجاری البرز</h3>
+                    <p>تلفیق معماری کاربردی و نمایی چشم‌نواز برای تجربه‌ای متفاوت.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://via.placeholder.com/300x200?text=مجتمع+مسکونی" alt="مجتمع مسکونی">
+                </div>
+                <div class="project-content">
+                    <h3>مجتمع مسکونی سبز</h3>
+                    <p>نمادی از پایداری و زیبایی با رعایت استانداردهای محیط‌زیستی.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://via.placeholder.com/300x200?text=برج+اداری" alt="برج اداری">
+                </div>
+                <div class="project-content">
+                    <h3>برج اداری آسمان</h3>
+                    <p>ترکیبی از طراحی مدرن و ساختار مقاوم با استفاده از فناوری‌های روز.</p>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="#" class="btn-orange">مشاهده همه پروژه‌ها</a>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats container">
+        <h2 class="section-title">دستاوردها و اعداد <span>نوین سازه البرز</span>؟</h2>
+        <p style="text-align: center; margin-bottom: 40px;">آمار ما گواه تجربه، سرعت اجرا و رضایت مشتریان است.</p>
+        
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number orange">+۳۰</div>
+                <div class="stat-label">متخصص فنی</div>
+                <div class="stat-desc">تیم مهندسی و اجرایی متشکل از کارشناسان حرفه‌ای.</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number yellow">۹۸%</div>
+                <div class="stat-label">رضایت مشتری</div>
+                <div class="stat-desc">درصد مشتریان راضی که همکاری مجدد داشته‌اند.</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number yellow">+۱۲۰</div>
+                <div class="stat-label">پروژه اجراشده</div>
+                <div class="stat-desc">پروژه‌های موفق در حوزه مسکونی، تجاری و صنعتی.</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number blue">+۲۰</div>
+                <div class="stat-label">سال تجربه</div>
+                <div class="stat-desc">سال‌ها تجربه در طراحی و اجرای پروژه‌های مدرن و پایدار.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials container">
+        <h2 class="section-title">مشتریان <span>نوین سازه البرز</span> چه می‌گویند؟</h2>
+        <p style="text-align: center; margin-bottom: 40px;">اعتماد مشتریان بزرگ‌ترین سرمایه ماست و بازخورد آن‌ها مسیر آینده‌مان را روشن می‌کند.</p>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-avatar">👤</div>
+                <div class="testimonial-name">آقای کریمی</div>
+                <div class="testimonial-text">نوین سازه البرز نشان داد که می‌توان همزمان هم کیفیت بالا داشت و هم نوآوری. همکاری با این تیم برای ما آرامش خاطر به همراه آورد.</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-avatar">👤</div>
+                <div class="testimonial-name">خانم احمدی</div>
+                <div class="testimonial-text">تیم نوین سازه البرز با مشاوره‌های دقیق و طراحی‌های مدرن، ما را در انتخاب بهترین مسیر یاری کردند. نهایی واقعاً حرفه‌ای و زیبا شد.</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-avatar">👤</div>
+                <div class="testimonial-name">آقای رضایی</div>
+                <div class="testimonial-text">همکاری با نوین سازه البرز برای ما تجربه‌ای بسیار مطمئن بود. کیفیت کار، تعهد و تحول به موقع باعث شد پروژه‌مان فراتر از انتظار پیش برود.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="articles container">
+        <h2 class="section-title">آخرین مقالات <span>نوین سازه البرز</span></h2>
+        <p style="text-align: center; margin-bottom: 40px;">مقالات تازه در حوزه مهندسی، فناوری و سازه‌های هوشمند</p>
+        
+        <div class="articles-grid">
+            <div class="article-card">
+                <div class="article-img">
+                    <img src="https://via.placeholder.com/300x200?text=طراحی+پایدار" alt="طراحی پایدار">
+                </div>
+                <div class="article-content">
+                    <h3>اهمیت طراحی پایدار در معماری مدرن</h3>
+                    <p>چرا پایداری و صرفه‌جویی انرژی در ساخت و ساز امروز اولویت دارد؟</p>
+                    <a href="#" class="btn-blue">ادامه مطلب</a>
+                </div>
+            </div>
+            <div class="article-card">
+                <div class="article-img">
+                    <img src="https://via.placeholder.com/300x200?text=سازه+هوشمند" alt="سازه هوشمند">
+                </div>
+                <div class="article-content">
+                    <h3>آینده سازه‌های هوشمند در ایران</h3>
+                    <p>نگاهی به روند توسعه ساختمان‌های هوشمند و تأثیر آن بر زندگی شهری.</p>
+                    <a href="#" class="btn-blue">ادامه مطلب</a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="#" class="btn-orange">مشاهده همه مقالات</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>فرم تماس سریع</h3>
+                    <form class="contact-form">
+                        <input type="text" placeholder="نام و نام خانوادگی">
+                        <input type="email" placeholder="ایمیل">
+                        <input type="tel" placeholder="پیام">
+                        <button type="submit">ارسال</button>
+                    </form>
+                </div>
+                <div class="footer-section">
+                    <h3>لینک‌های سریع</h3>
+                    <ul>
+                        <li><a href="#">مشاوره رایگان</a></li>
+                        <li><a href="#">طراحی و مهندسی</a></li>
+                        <li><a href="#">اجرای پروژه‌ها</a></li>
+                        <li><a href="#">پشتیبانی و نگهداری</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>لینک‌های سریع</h3>
+                    <ul>
+                        <li><a href="#">خانه</a></li>
+                        <li><a href="#">درباره ما</a></li>
+                        <li><a href="#">خدمات</a></li>
+                        <li><a href="#">پروژه‌ها</a></li>
+                        <li><a href="#">تماس با ما</a></li>
+                        <li><a href="#">وبلاگ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i>in</i></a>
+                <a href="#" class="social-icon"><i>IG</i></a>
+                <a href="#" class="social-icon"><i>TL</i></a>
+                <a href="#" class="social-icon"><i>f</i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>آدرس: تهران، خیابان مثال، ساختمان نوین سازه | تلفن: ۰۹۱۷۲۶۱۸۴۳۲ | ایمیل: info@novinsazeh.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple form validation (optional enhancement)
+        document.querySelector('.contact-form')?.addEventListener('submit', function(e) {
+            const name = this.querySelector('input[type="text"]');
+            const email = this.querySelector('input[type="email"]');
+            const message = this.querySelector('input[type="tel"]');
+            
+            if (!name.value.trim()) {
+                alert('لطفا نام خود را وارد کنید.');
+                e.preventDefault();
+                return;
+            }
+            
+            if (!email.value.trim() || !/^\S+@\S+\.\S+$/.test(email.value)) {
+                alert('لطفا ایمیل معتبر وارد کنید.');
+                e.preventDefault();
+                return;
+            }
+            
+            if (!message.value.trim()) {
+                alert('لطفا پیام خود را بنویسید.');
+                e.preventDefault();
+                return;
+            }
+            
+            alert('فرم با موفقیت ارسال شد. با شما تماس خواهیم گرفت.');
+            // You can add AJAX submission here
+        });
+
+        // Add active class to current page link (if needed)
+        window.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname;
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.style.color = '#ff8c00';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

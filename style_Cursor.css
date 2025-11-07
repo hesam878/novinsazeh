@@ -1,0 +1,389 @@
+@font-face {
+    font-family: 'iransans';
+    src: url('../font/iransans2.woff2');
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: iransans;
+    direction: rtl;
+    margin: 0;
+    padding-top: 90px;
+    line-height: 1.8;
+    background-color: #f8f9fa;
+    color: #1b1b1b;
+}
+nav{
+    background-color: #023047;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+/* .page_links_nav{
+    margin-top: 10px;
+} */
+.link_page{
+    color: white !important;
+    margin: 0 10px;
+    font-weight: 500;
+}
+.link_page:hover{
+    color: #8ECAE6 !important;
+}
+.btn_link_page{
+    background-color: #FB8500;
+    color: white  !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 160px;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.btn_link_page:hover{
+    background-color: #f08000;
+    color: white !important;
+}
+.color_asli{
+    color: #219EBC;
+}
+header{
+    background-color: #ffffff;
+}
+.content_header{
+    padding: 12vh 0 6vh;
+}
+.content_header h1{
+    font-weight: 800;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+}
+.content_header p{
+    max-width: 560px;
+    margin: 0;
+}
+.image_header{
+    width: 100%;
+    max-width: 540px;
+}
+.pragraf{
+    color: #0000009e;
+}
+.content_header_text{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.div_btn_header{
+    gap: 16px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+.content_header_media{
+    display: flex;
+    justify-content: center;
+}
+.btn_heeder_fr , .btn_heeder_as{
+    cursor: pointer;
+    font-size: 16px;
+    padding: 12px 28px;
+    border-radius: 10px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn_heeder_fr{
+    color: #023047;
+    border: 3px solid #219EBC;
+    background-color: transparent;
+}
+.btn_heeder_fr:hover{
+    background-color: rgba(33, 158, 188, 0.1);
+}
+.btn_heeder_as{
+    background-color: #219EBC;
+    color: white;
+}
+.btn_heeder_as:hover{
+    color: white;
+    background-color: #219dbcdf;
+}
+.takhsos , .entekhab , .project , .dast_avard , .nazar , .maghale{
+    padding: 12vh 0;
+}
+.title_home_page{
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+.div_takhsos {
+    text-align: center;
+    padding: 32px 20px;
+    border-radius: 16px;
+    box-shadow: 0px 16px 30px -18px rgba(2, 48, 71, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    background-color: #ffffff;
+    height: 100%;
+}
+.div_takhsos:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 18px 35px -12px rgba(2, 48, 71, 0.45);
+}
+.takhsos .row p{
+    margin-top: 16px;
+}
+.takhsos .row h5{
+    font-weight: bold;
+    color: #023047;
+}
+.btn_takhasos , .btn_mataleb{
+    background-color: #FB8500;
+    padding: 12px 32px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 220px;
+    margin: 40px auto 0;
+    transition: background-color 0.3s ease;
+}
+.btn_mataleb{
+    background-color: #219EBC;
+    font-size: 16px;
+    padding: 10px 26px;
+    min-width: 160px;
+    margin: 24px auto 0;
+}
+.btn_mataleb:hover{
+    color: white;
+    background-color: #219dbcec;
+    cursor: pointer;
+}
+.btn_takhasos:hover{
+    color: white;
+    background-color: #f08000;
+    cursor: pointer;
+}
+.div_tozih_entehkab{
+    width: 100%;
+    box-shadow: 0px 16px 30px -18px rgba(2, 48, 71, 0.4);
+    padding: 24px 30px;
+    border-radius: 16px;
+    margin-top: 5vh;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background-color: #ffffff;
+}
+.div_tozih_entehkab:hover{
+    transform: translateY(-8px);
+    box-shadow: 0px 18px 35px -12px rgba(2, 48, 71, 0.45);
+}
+.entekhab h4{
+    font-weight: bold;
+    color: #023047;
+}
+.div_tozih_entehkab img{
+    margin-top: 0;
+    flex-shrink: 0;
+}
+.div_tozih_entehkab div{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.project_card{
+    background-color: #ffffff;
+    box-shadow: 0px 16px 30px -18px rgba(2, 48, 71, 0.4);
+    text-align: center;
+    border-radius: 16px;
+    padding: 24px 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    height: 100%;
+}
+.project_card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0px 20px 40px -18px rgba(2, 48, 71, 0.45);
+}
+.project_card img{
+    border-radius: 16px;
+    width: 100%;
+}
+.project_card h3{
+    margin-top: 24px;
+    font-weight: bold;
+    color: #023047;
+}
+.stat_card{
+    padding: 50px 20px;
+    text-align: center;
+    box-shadow: 0px 16px 30px -18px rgba(2, 48, 71, 0.4);
+    border-radius: 16px;
+    background-color: #ffffff;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+.stat_card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0px 20px 40px -18px rgba(2, 48, 71, 0.45);
+}
+.dast_avard .adad{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.blue{
+    background-color: #8ECAE6;
+}
+.yellow{
+    background-color: #FFB703;
+}
+.orange{
+    background-color: #FB8500;
+}
+.red{
+    background-color: #FF4D00;
+}
+.testimonial_card{
+    padding: 50px 35px;
+    box-shadow: 0px 16px 30px -18px rgba(2, 48, 71, 0.4);
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 16px;
+    background-color: #ffffff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+.testimonial_card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0px 20px 40px -18px rgba(2, 48, 71, 0.45);
+}
+.testimonial_card > div{
+    width: 60px;
+    background-color: #EDFDFF;
+    padding: 12px;
+    margin: 0 auto;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.maghale{
+    background-color: transparent;
+}
+.article_card{
+    text-align: center;
+    box-shadow: 0px 16px 30px -18px rgba(2, 48, 71, 0.4);
+    border-radius: 20px;
+    padding: 24px;
+    background-color: #ffffff;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.article_card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0px 20px 40px -18px rgba(2, 48, 71, 0.45);
+}
+.article_card h4{
+    margin: 16px 0 8px;
+    font-weight: bold;
+}
+
+@media (max-width: 1199.98px) {
+    body{
+        padding-top: 86px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    body{
+        padding-top: 80px;
+    }
+    .content_header{
+        padding: 10vh 0 4vh;
+        text-align: center;
+    }
+    .content_header_text{
+        align-items: center;
+    }
+    .content_header p{
+        max-width: 100%;
+    }
+    .div_btn_header{
+        justify-content: center;
+    }
+    .content_header_media{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .btn_link_page{
+        width: 100%;
+        min-width: unset;
+    }
+    .navbar-nav{
+        align-items: flex-start !important;
+        gap: 12px;
+    }
+    .div_tozih_entehkab{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .content_header{
+        padding: 8vh 0 3vh;
+    }
+    .div_btn_header{
+        width: 100%;
+    }
+    .btn_heeder_fr , .btn_heeder_as{
+        width: 100%;
+    }
+    .btn_takhasos , .btn_mataleb{
+        width: 100%;
+        min-width: unset;
+    }
+    .div_tozih_entehkab{
+        padding: 20px;
+    }
+    .takhsos , .entekhab , .project , .dast_avard , .nazar , .maghale{
+        padding: 8vh 0;
+    }
+}
